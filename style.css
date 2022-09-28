@@ -1,0 +1,267 @@
+input:focus{
+	outline: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Inconsolata', monospace;
+}
+#bg{
+	width: 35%;
+	height: 100vh;
+	background-image: url(images/bg-main-desktop.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#front{
+	width: 300px;
+	transform: translate(-67%,-100%);
+	position: absolute;
+	top: 47%;
+	left: 35%;
+}
+#img-front{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+}
+#back{
+	width: 300px;
+	transform: translateX(-50%);
+	position: absolute;
+	top: 52%;
+	left: 35%;
+}
+#img-back{
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+}	
+#tnum{
+	color: white;
+	position: absolute;
+	font-size: 22.8px;
+	bottom: 50px;
+	left: 20px;
+}
+#tnom{
+	color: white;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+#texp{
+	color: white;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+#crcl1{
+	background-color: white;
+	width: 35px;
+	height: 35px;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 110px;
+	left: 20px;
+}
+#crcl2{
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+	background-color: transparent;
+	width: 17px;
+	height: 17px;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 119px;
+	left: 65px;
+}
+#tcvc{
+	color: white;
+	position: absolute;
+	top: 73px;
+	right: 40px;
+}
+form{
+	width: 21%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 70%;
+} 
+form label{
+	position: relative;
+	bottom:2px;
+	font-size: 13px;
+}
+input{
+	height: 26px;
+	border-radius: 7px; 
+	border-color: #6b28a887;
+	border-width: 1px;
+	padding-left: 10px;
+	padding-top: 2px;
+	font-weight: 540;
+	font-size: 14px;
+	font-family: sArial, sans-serif;
+	width: 100%;
+}
+#mm,#yy{
+	width: 36%;
+}
+.conf{
+	position: relative;
+	height: 35px;
+	border-radius: 7px; 
+	width: calc(100% + 14px);
+	border: none;
+	color: white;
+	background-color: transparent;
+	font-family: sans-serif;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	overflow: hidden;
+}
+.conf:before{
+	content: "";
+	background-color: #23095c;
+	width: calc(100% + 14px);
+	height: 100%;
+	position:absolute;
+	left: 0;
+	z-index: -2;
+}
+.conf:after{
+	content: "";
+	height: 100%;
+	width: 0%;
+	transform: translate(-50%,0%);
+	position: absolute;
+	left: 50%;
+	background-color: #5187ed;
+	border-radius: 20px;
+	transition-duration: 0.4s;
+	z-index: -1;
+}
+.conf:hover{
+	transform: translateY(-7px);
+	box-shadow: 0px 5px 10px #00000094;
+}
+.conf:hover:after{
+	width: calc(100% + 25px);
+}
+.conf:active{
+	transform: translateY(0px);
+}
+span{
+	color: red;
+	font-size: 9.5px;
+}
+@media (max-width: 600px){
+	#bg{
+		width: 100%;
+		height: 30vh;
+		background-image: url(images/bg-main-desktop.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	#front{
+		width: 250px;
+		transform: translate(-50%,77px);
+		position: absolute;
+		top: 25%;
+		left: 40%;
+		z-index: 2;
+	}
+	#back{
+		width: 250px;
+		transform: translateX(-50%);
+		position: absolute;
+		top: 4%;
+		left: 60%;
+		z-index: 1;
+	}
+	#tnum{
+		color: white;
+		position: absolute;
+		font-size: 19.7px;
+		bottom: 50px;
+		left: 20px;
+	}
+	#crcl1{
+		background-color: white;
+		width: 25px;
+		height: 25px;
+		border-radius: 20px;
+		position: absolute;
+		bottom: 95px;
+		left: 20px;
+	}
+	#crcl2{
+		border-width: 1px;
+		border-color: white;
+		border-style: solid;
+		background-color: transparent;
+		width: 13px;
+		height: 13px;
+		border-radius: 10px;
+		position: absolute;
+		bottom: 100px;
+		left: 55px;
+	}
+	#tcvc{
+		color: white;
+		position: absolute;
+		top: 59px;
+		right: 30px;
+	}
+	form{
+		width: 80%;
+		transform: translate(-50%,-50%);
+		position: absolute;
+		top: 80%;
+		left: 50%;
+	} 
+	.conf{
+		margin-bottom: 80px;
+	}
+}
+#suiv{
+	width: 100%;
+	text-align: center;
+	display: none;
+	transition-duration: 0.5s;
+}
+#crcl3{
+	width: 60px;
+	height:  60px;
+	border-radius: 30px;
+	background-image: linear-gradient( to bottom, #6343f6 ,#610596);
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+h2{
+	margin-top: 40px;
+}
+h3{
+	margin-top: 20px;
+	font-weight: normal;
+}
